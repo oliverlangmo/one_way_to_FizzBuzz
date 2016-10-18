@@ -5,15 +5,20 @@ function fizzBuzz(){
  for (var i = 1; i <= count; i++) {
    output = '';
   if (i % 3 ===0){
-    output += 'Fizz'+' ';
+    output+= 'Fizz';
   }
   if (i % 5 === 0){
-    output += 'Buzz'+' ';
+    output+= 'Buzz';
   }
   if (!i % 3 ===0 && !i % 5 ===0){
     output +=i;
   }
   console.log(output);
+  var p = document.createElement('p');
+  var t = document.createTextNode(output);
+  p.appendChild(t);
+  document.getElementById('outputDiv').appendChild(p);
+
+
 }
 }
-fizzBuzz();
